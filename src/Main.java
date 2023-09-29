@@ -3,19 +3,16 @@ import TaxCalculator.TaxCalculator;
 public class Main {
     public static void main(String[] args) {
 
-        double price = 25.50;
-        double tax = 0.01;
-        int quantity = 2;
-        double total = 0;
-        String Messager  = "I want to by  " + quantity + " shirt";
+        TaxCalculator calc= new TaxCalculator();
+        calc.price = 25.50;
+        calc.tax = 2.01;
+        calc.quantity = 2;
+        calc.total = 0;
+     //  String Messager  = "I want to by  " + calc.quantity + " shirt";
 
-       total = price * quantity * tax;
 
-        System.out.println( "Pret:" + price);
-        System.out.println("Taxa:" + tax);
-        System.out.println("Cantitate:" + quantity);
-
-        System.out.println(Messager);
-        System.out.println("Total cost with tax is " + total + " shirt");
+        calc.printVariables();
+    //    System.out.println(Messager);
     }
 }
+
